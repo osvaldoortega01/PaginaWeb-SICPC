@@ -1,6 +1,6 @@
 @font-face {
-    font-family: "inconsolata";
-    src: url(../fonts/Inconsolata-VariableFont_wdth\,wght.ttf);
+    font-family: "Montserrat";
+    src: url(../fonts/Montserrat-VariableFont_wght.ttf);
 }
 @font-face {
     font-family: "Poppins";
@@ -11,7 +11,7 @@
 }
 body {
     margin:0;
-    font-family: "inconsolata";
+    font-family: "Montserrat";
 }
 li {
     font-family: "Arial", cursive, sans-serif
@@ -34,7 +34,7 @@ img {
 }
 .main-header__title{
     text-align:center;
-    font-size: 2.5em;
+    font-size: 1em;
     margin: 10px 0;
     color: #454546;
     font-family: "Poppins";
@@ -266,7 +266,7 @@ img {
     }
     .main-header__title{
         width: 100%;
-        font-size: 4em;
+        font-size: 2.5em;
         margin: 0;
         border-bottom: 1px solid #ccc;
     }
