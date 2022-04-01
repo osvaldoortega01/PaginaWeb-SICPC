@@ -68,14 +68,14 @@ img {
 }
 .menu__link{
     padding: 20px;
-    color: white;
+    color: #212121;
     text-decoration: none;
     position: relative;
     display: block;
 }
 .menu__link:hover{
-    background: white;
-    color: #212121;
+    background: #333;
+    color: white;
 }
 .mostrar{
     opacity: 1;
