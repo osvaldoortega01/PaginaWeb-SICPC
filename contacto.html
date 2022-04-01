@@ -5,8 +5,41 @@
 <title>CONTACTANOS</title>
 <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
 <link rel="stylesheet" href="Css/estilos.css">
+<link rel="stylesheet" href="Css/contacto.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 <script src="https://kit.fontawesome.com/24a2bbd145.js" crossorigin="anonymous"></script>
+
+<!-- Aquí inicia el código de JS que se puede pasar a otros archivos, pero no sé cómo hacerloxd -->
+<!-- Este código es el que conecta a la API de EmailJS para enviar el formulario -->
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+<script type="text/javascript">
+    (function() {
+    emailjs.init("r8G4IL0DMWnGZM4SS");
+    })();
+    </script>
+        <script type="text/javascript">
+            window.onload = function() {
+                const btn = document.getElementById('button');
+                document.getElementById('contact-form').addEventListener('submit', function(event) {
+                    event.preventDefault();
+                    btn.value = 'Enviando...';
+                    // generate a five digit number for the contact_number variable
+                    this.contact_number.value = Math.random() * 100000 | 0;
+                    // these IDs from the previous steps
+                    emailjs.sendForm('service_bktc20k', 'template_lgazytl', this)
+                        .then(function() {
+                            alert('Enviado')
+                            btn.value = 'Enviando...';
+                            document.getElementById('contact-form').reset();
+                        }, function(error) {
+                            btn.value = 'Enviar';
+                            alert('Ocurrió un error inesperado inténtelo más tarde')
+                        });
+                    });
+    
+            }
+        </script>
+    <!-- Aquí termina el código de JS -->
     </head>
     <body>
         <header class="main-header">
@@ -62,7 +95,28 @@
         </div>
     </div>
     <div class="forms">
-        <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSc2xNmvDzHDpIsMz-8Vzk8GSvcD7g16JiTpZ_VmECVqyYTmxg/viewform?embedded=true" width="640" height="967" frameborder="0" marginheight="0" marginwidth="0">Cargando…</iframe>        <!--Aqui se le puede cambiar el link del forms para agregar cualquier tipo de formulario a la pagina-->
+        <form id="contact-form">
+            <label class="field field_v1">
+                <input type="text" class="form__field" placeholder="Enter" name="user_name">
+                <span class="field__label-wrapp">
+                    <span class="field__label">Nombre completo</span>
+                </span>
+            </label>
+
+            <label>E-mail</label>
+            <input type="email" class="form__field" name="user_email">
+
+            <label>Teléfono</label>
+            <input type="tel" class="form__field" name="user_phone">
+
+            <label>Empresa</label>
+            <input type="text" class="form__field" name="user_business">
+
+            <label>Mensaje</label>
+            <textarea name="message" class="form__field" ></textarea>
+
+            <input type="submit" id="button" value="Enviar">
+        </form>
     </div>
 </div>
 </main>
