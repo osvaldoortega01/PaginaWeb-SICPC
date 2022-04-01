@@ -224,16 +224,6 @@ img {
    transform: scale(1.09);
     transition: all ease 0.5s;
 }
-.product:before{
-    content: "New";
-    background: #ff4e00;
-    padding: 10px 20px;
-    position: absolute;
-    top: 13px;
-    right: 10px;
-    transform: rotate(-90deg);
-    color: white;
-}
 .product__img{
     width: 50%;
     height: 100px;
