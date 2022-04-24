@@ -5,7 +5,7 @@ import Link from "next/link";
 import Image from "next/image";
 
 //Assets
-import LogoSICPC from "./assets/Logo_SICPC.svg";
+import LogoSICPC from "./assets/Logo_SICPC.png";
 
 const ResponsiveMenu = () => {
   const [isOpen, setisOpen] = useState(false);

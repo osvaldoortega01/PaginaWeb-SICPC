@@ -1,5 +1,5 @@
 //Logo
-import LogoSICPC from "./assets/Logo_SICPC.svg";
+import LogoSICPC from "./assets/Logo_SICPC.png";
 
 //Icons
 import { SiTwitter, SiLinkedin } from "react-icons/si";

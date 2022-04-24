@@ -3,7 +3,7 @@ import { AiOutlineWhatsApp } from "react-icons/ai";
 const WhatsAppBtn = () =>{
     return(
     <a
-    href="https://wa.me/5211234567890?text=Me%20gustaría%20saber%20el%20precio%20del%20coche"
+    href="https://wa.me/5218113254100?text=Buenas%20tardes,%20"
     className="
     fixed 
     w-16 
