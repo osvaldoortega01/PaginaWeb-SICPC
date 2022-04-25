@@ -9,7 +9,7 @@ import Link from "next/link";
 import ResponsiveMenu from "./ResponsiveMenu";
 
 const Header = () => {
-  const correoContacto = "contacto.sicpc@gmail.com";
+  const correoContacto = "grupotecnico@sicpcgrupo.tech";
   const telefonoContacto = "tel:(81) 1325 4100";
 
   return (

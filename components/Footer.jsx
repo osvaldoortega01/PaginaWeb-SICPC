@@ -8,7 +8,7 @@ import { IoIosMail, IoIosCall } from "react-icons/io";
 import Image from "next/dist/client/image";
 import Link from "next/dist/client/link";
 const Footer = () => {
-  const correoContacto = "mailto:contacto.sicpc@gmail.com";
+  const correoContacto = "mailto:grupotecnico@sicpcgrupo.tech";
   const telefonoContacto = "tel:(81) 1325 4100";
   return (
     <div>
@@ -126,7 +126,7 @@ const Footer = () => {
           </div>
           <span>
             <Link href={correoContacto} className="mt-3">
-              contacto.sicpc@gmail.com
+            grupotecnico@sicpcgrupo.tech
             </Link>{" "}
           </span>
           <div className="flex mt-5">
