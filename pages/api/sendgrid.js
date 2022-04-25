@@ -1,11 +1,11 @@
 import sendgrid from "@sendgrid/mail";
 
-sendgrid.setApiKey(process.env.SENDGRID_API_KEY);
+sendgrid.setApiKey('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');
 async function sendEmail(req, res) {
   try {
     await sendgrid.send({
-      to: "gusgus3134@outlook.com", // Your email where you'll receive emails
-      from: "", // your website email address here
+      to: "grupotecnico@sicpcgrupo.tech", // Your email where you'll receive emails
+      from: "grupotecnico@sicpcgrupo.tech", // your website email address here
       subject: `Servicios Integrales y Consultoría en Protección Civil : ${req.body.subject}`,
       html: `<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
       <html lang="en">
@@ -33,7 +33,7 @@ async function sendEmail(req, res) {
               <br>
               </div>
               
-              <p class="footer" style="font-size: 16px;padding-bottom: 20px;border-bottom: 1px solid #D1D5DB;"><br>${req.body.fullname}<br><br><a href="tel:${req.body.phone} _blank">Telefono: ${req.body.phone}</a></p>
+              <p class="footer" style="font-size: 16px;padding-bottom: 20px;border-bottom: 1px solid #D1D5DB;"><br>Atentamnte: ${req.body.fullname}<br><br><a href="tel:${req.body.phone} _blank">Telefono: ${req.body.phone}</a></p>
               
               <div class="footer-links" style="display: flex;justify-content: center;align-items: center;">
                 <a href="https://manuarora.in/" style="text-decoration: none;margin: 8px;color: #9CA3AF;">Website</a>
@@ -49,7 +49,7 @@ async function sendEmail(req, res) {
       </html>`,
     });
   } catch (error) {
-    // console.log(error);
+    console.log(error);
     return res.status(error.statusCode || 500).json({ error: error.message });
   }
 
